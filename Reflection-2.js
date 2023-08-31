@@ -25,6 +25,8 @@ function my_sum(n) {
 
 function sum(term, a, next, b) {
     return a > b ? 0 : term(a) + sum(term, next(a), next, b);
+    // iterative version:
+    // return a > b ? 0 : sum_iter(term, next(a), next, b, 0);
 }
 
 function my_ho_sum(n) {
@@ -35,4 +37,8 @@ function my_ho_sum(n) {
         return n + 1;
     }
     return sum(base, 1, next, n);
+}
+
+function sum_iter(term, a, next, b, total) {
+    return a > b ? total : sum_iter(term, next(a), next, b, total);
 }
