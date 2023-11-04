@@ -104,10 +104,6 @@ function make_NiFT(T) {
 } // all works
 
 
-// Task 3B
-function 
-
-
 
 
 
